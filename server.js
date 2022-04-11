@@ -20,6 +20,6 @@ app.get("/", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify(data, null, 3));
 });
-app.listen(port, hostname, () => {
-    console.log(`Server up and running on : http://${hostname}:${port}/`);
+app.listen(port, () => {
+    console.log(`Server up and running on : ${port}`);
 });
