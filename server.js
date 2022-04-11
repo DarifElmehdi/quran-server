@@ -62,6 +62,21 @@ app.get("/surah/:number", (req, res) => {
     }
 });
 
+// Home Path
+app.get("/", (req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    res.end(
+        JSON.stringify(
+            {
+                Server: "Quran-Server",
+                "git-repo": "https://github.com/DarifElmehdi/quran-server",
+                author: "Darif Elmehdi",
+            },
+            null,
+            3
+        )
+    );
+});
 app.listen(port, () => {
     console.log(`Server up and running on : ${port}`);
 });
