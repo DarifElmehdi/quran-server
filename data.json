@@ -293,9 +293,9 @@
             "en_riwaya": " Rewayat Khalaf A'n Hamzah",
             "hassubfolder": "true",
             "subfolder": [
+                "Rewayat-Khalaf-A-n-Hamzah",
                 "Rewayat-Assosi-A-n-Abi-Amr",
-                "Rewayat-Hafs-A-n-Assem",
-                "Rewayat-Khalaf-A-n-Hamzah"
+                "Rewayat-Hafs-A-n-Assem"
             ]
         },
         {
@@ -389,9 +389,9 @@
             "en_riwaya": " Rewayat Hafs A'n Assem",
             "hassubfolder": "true",
             "subfolder": [
+                "Rewayat-Hafs-A-n-Assem",
                 "Rewayat-Albizi-A-n-Ibn-Katheer",
                 "Rewayat-Aldori-A-n-Abi-Amr",
-                "Rewayat-Hafs-A-n-Assem",
                 "Rewayat-Qalon-A-n-Nafi",
                 "Rewayat-Qunbol-A-n-Ibn-Katheer",
                 "Rewayat-Sho-bah-A-n-Asim"
@@ -763,7 +763,7 @@
             "ar_name": "\u0627\u0628\u0631\u0627\u0647\u064a\u0645 \u0627\u0644\u062f\u0648\u0633\u0631\u064a ",
             "en_riwaya": " Rewayat Warsh A'n Nafi'",
             "hassubfolder": "true",
-            "subfolder": ["Rewayat-Hafs-A-n-Assem", "Rewayat-Warsh-A-n-Nafi"]
+            "subfolder": ["Rewayat-Warsh-A-n-Nafi", "Rewayat-Hafs-A-n-Assem"]
         },
         {
             "en_name": "Ibrahim Aljormy",
@@ -872,16 +872,6 @@
             "ar_name": "\u062e\u0627\u0644\u062f \u0627\u0644\u0645\u0647\u0646\u0627 ",
             "en_riwaya": " Rewayat Hafs A'n Assem",
             "hassubfolder": "false"
-        },
-        {
-            "en_name": "Khalid Alsharekh",
-            "identifier": "sharekh",
-            "server": "server15.mp3quran.net",
-            "ar_riwaya": " \u062d\u0641\u0635 \u0639\u0646 \u0639\u0627\u0635\u0645",
-            "ar_name": "\u062e\u0627\u0644\u062f \u0627\u0644\u0634\u0627\u0631\u062e ",
-            "en_riwaya": " Rewayat Hafs A'n Assem",
-            "hassubfolder": "false",
-            "subfolder": []
         },
         {
             "en_name": "Khalifa Altunaiji",
@@ -1219,10 +1209,11 @@
             "en_riwaya": " Rewayat Aldori A'n Abi Amr",
             "hassubfolder": "true",
             "subfolder": [
-                "Rewayat-AlDorai-A-n-Al-Kisa-ai",
                 "Rewayat-Aldori-A-n-Abi-Amr",
-                "Rewayat-Hafs-A-n-Assem",
                 "Rewayat_Ibn-Thakwan-A-n-Ibn-Amer",
+                "Rewayat-AlDorai-A-n-Al-Kisa-ai",
+
+                "Rewayat-Hafs-A-n-Assem",
                 "Rewayat_Sho-bah-A-n-Asim"
             ]
         },
