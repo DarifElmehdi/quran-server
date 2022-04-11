@@ -1,9 +1,12 @@
 const express = require("express");
-const app = express();
-var data = require("./data.json");
-var meta = require("./meta.json");
+const path = require("path");
+const fs = require("fs");
 const fetch = require("node-fetch");
 
+var data = require("./data.json");
+var meta = require("./meta.json");
+
+const app = express();
 let audioList = [];
 
 port = process.env.PORT || 3000;
@@ -36,7 +39,7 @@ app.get("/audiolist/:identifier", (req, res) => {
     res.setHeader("Content-Type", "application/json");
     setTimeout(() => {
         res.end(JSON.stringify(audioList.sort(compareIndex), null, 3));
-    }, 500);
+    }, 1000);
 });
 
 // Get All Quran surah infos
@@ -79,6 +82,19 @@ app.get("/", (req, res) => {
 });
 app.listen(port, () => {
     console.log(`Server up and running on : ${port}`);
+});
+
+//Get quran page
+app.get("/quran/:page", (req, res) => {
+    let pageNumber = req.params.page;
+    if (pageNumber >= 1 && pageNumber <= 604) {
+        const file = `./quran-images/${pageNumber}.png`;
+        var img = fs.readFileSync(file);
+        res.writeHead(200, { "Content-Type": "image/png" });
+        res.end(img, "binary");
+    } else {
+        res.end(JSON.stringify({ error: "Page number invalid !" }, null, 3));
+    }
 });
 
 // validate a single url
