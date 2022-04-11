@@ -47,14 +47,19 @@ app.get("/surahs", (req, res) => {
 
 // Get a single surah infos
 app.get("/surah/:number", (req, res) => {
+    let surahNumber = req.params.number;
     res.setHeader("Content-Type", "application/json");
-    res.end(
-        JSON.stringify(
-            meta["data"]["surahs"]["references"][req.params.number - 1],
-            null,
-            3
-        )
-    );
+    if (surahNumber >= 1 && surahNumber <= 114) {
+        res.end(
+            JSON.stringify(
+                meta["data"]["surahs"]["references"][surahNumber - 1],
+                null,
+                3
+            )
+        );
+    } else {
+        res.end(JSON.stringify({ error: "Surah number invalid !" }, null, 3));
+    }
 });
 
 app.listen(port, () => {
