@@ -118,7 +118,28 @@ const validating = (server, identifier) => {
         let url = `http://${server}/${identifier}/${fileName}`;
         isValidAudioUrl(url).then((result) => {
             if (result == true) {
-                audioList.push({ index: i, url: url });
+                audioList.push({
+                    index: i,
+                    url: url,
+                    ar_name:
+                        meta["data"]["surahs"]["references"][i - 1]["name"],
+                    en_name:
+                        meta["data"]["surahs"]["references"][i - 1][
+                            "englishName"
+                        ],
+                    en_tr_name:
+                        meta["data"]["surahs"]["references"][i - 1][
+                            "englishNameTranslation"
+                        ],
+                    en_type:
+                        meta["data"]["surahs"]["references"][i - 1][
+                            "revelationType"
+                        ],
+                    ar_type:
+                        meta["data"]["surahs"]["references"][i - 1][
+                            "ar_revelationType"
+                        ],
+                });
             }
         });
     }
