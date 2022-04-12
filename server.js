@@ -22,6 +22,8 @@ app.get("/reciters", (req, res) => {
             ar_name: item["ar_name"],
             en_name: item["en_name"],
             identifier: item["identifier"],
+            en_riwaya: item["en_riwaya"],
+            ar_riwaya: item["ar_riwaya"],
         });
     });
     res.end(JSON.stringify(reciters, null, 3));
