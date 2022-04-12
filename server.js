@@ -13,6 +13,7 @@ port = process.env.PORT || 3000;
 
 // Get a list of reciters
 app.get("/reciters", (req, res) => {
+    let reciters = [];
     res.setHeader("Content-Type", "application/json");
     data["data"].filter((item) => {
         reciters.push({
