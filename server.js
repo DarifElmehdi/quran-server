@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
 const fetch = require("node-fetch");
@@ -7,9 +8,10 @@ var data = require("./data.json");
 var meta = require("./meta.json");
 
 const app = express();
+app.use(cors());
 let audioList = [];
 
-port = process.env.PORT || 3000;
+port = process.env.PORT || 5000;
 
 // Get a list of reciters
 app.get("/reciters", (req, res) => {
