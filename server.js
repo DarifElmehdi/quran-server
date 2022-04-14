@@ -122,9 +122,7 @@ const validating = (server, identifier) => {
             if (result == true) {
                 audioList.push({
                     index: i,
-                    url:
-                        "https://http-to-https.herokuapp.com/" +
-                        encodeURIComponent(url),
+                    url: url,
                     ar_name:
                         meta["data"]["surahs"]["references"][i - 1]["name"],
                     en_name:
