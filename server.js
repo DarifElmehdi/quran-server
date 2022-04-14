@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 let audioList = [];
 
-port = process.env.PORT || 5000;
+port = process.env.PORT || 8000;
 
 // Get a list of reciters
 app.get("/reciters", (req, res) => {
@@ -135,7 +135,9 @@ const validating = (server, identifier) => {
             if (result == true) {
                 audioList.push({
                     index: i,
-                    url: url,
+                    url:
+                        "https://http-to-https.herokuapp.com/" +
+                        encodeURIComponent(url),
                     ar_name:
                         meta["data"]["surahs"]["references"][i - 1]["name"],
                     en_name:
