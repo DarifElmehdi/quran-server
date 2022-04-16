@@ -29,6 +29,22 @@ app.get("/reciters", (req, res) => {
     res.end(JSON.stringify(reciters, null, 3));
 });
 
+// Get a specifique reciter
+app.get("/reciter/:identifier", (req, res) => {
+    let reciters = [];
+    res.setHeader("Content-Type", "application/json");
+
+    res.end(
+        JSON.stringify(
+            data["data"].find(
+                (item) => item["identifier"] === req.params.identifier
+            ),
+            null,
+            3
+        )
+    );
+});
+
 //Get a list of available surah resitation of a specifique reciter
 app.get("/audiolist/:identifier", (req, res) => {
     empty();
