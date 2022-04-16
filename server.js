@@ -1,17 +1,18 @@
-const express = require("express");
-const cors = require("cors");
-const path = require("path");
-const fs = require("fs");
-const fetch = require("node-fetch");
+import express from "express";
+import cors from "cors";
+import path from "path";
+import fs from "fs";
+import fetch from "node-fetch";
 
-var data = require("./data.json");
-var meta = require("./meta.json");
+let data = JSON.parse(fs.readFileSync("./data.json"));
+
+let meta = JSON.parse(fs.readFileSync("./meta.json"));
 
 const app = express();
 app.use(cors());
 let audioList = [];
 
-port = process.env.PORT || 8000;
+let port = process.env.PORT || 8000;
 
 // Get a list of reciters
 app.get("/reciters", (req, res) => {
