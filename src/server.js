@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import path from "path";
+import serverless from "serverless-http";
 import fs from "fs";
 import fetch from "node-fetch";
 
@@ -102,9 +102,14 @@ app.get("/", (req, res) => {
         )
     );
 });
-app.listen(port, () => {
+/* app.listen(port, () => {
     console.log(`Server up and running on : ${port}`);
-});
+});*/
+
+app.use(`/.netlify/functions/server`, router);
+
+module.exports = app;
+module.exports.handler = serverless(app);
 
 //Get quran page
 app.get("/quran/:page", (req, res) => {
