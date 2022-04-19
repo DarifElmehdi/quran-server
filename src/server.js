@@ -1,8 +1,8 @@
-import express from "express";
-import cors from "cors";
-import serverless from "serverless-http";
-import fs from "fs";
-import fetch from "node-fetch";
+const express = require("express");
+const cors = require("cors");
+const serverless = require("serverless-http");
+const fs = require("fs");
+const fetch = require("node-fetch");
 
 let data = JSON.parse(fs.readFileSync("./data.json"));
 
